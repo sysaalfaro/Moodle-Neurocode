@@ -377,7 +377,7 @@ Verificar que el envío de correo esté configurado correctamente:
 
 **Administración del sitio → Seguridad → Políticas de seguridad del sitio**
 
-- Definir si se fuerza HTTPS (solo aplicable si se configuró el certificado autofirmado de la sección 9) o se mantiene HTTP simple dentro de la red interna.
+- Definir si se fuerza HTTPS o se mantiene HTTP simple dentro de la red interna.
 - Configurar política de contraseñas (longitud mínima, complejidad) o por dejarla por defecto.
 - Revisar "Notificaciones de seguridad" para que Moodle avise si detecta configuraciones inseguras.
 

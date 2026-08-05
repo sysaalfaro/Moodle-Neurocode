@@ -4,20 +4,20 @@
 
 ```bash
 cd /var/www/html/moodle/theme
-sudo mkdir nombretema
-cd nombretema
+sudo mkdir ncthemev1
+cd ncthemev1
 sudo mkdir lang lang/es layout pix scss templates
 ```
 
 ## 2. Archivo `config.php` (obligatorio)
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/config.php
+sudo nano /var/www/html/moodle/theme/ncthemev1/config.php
 ```
 
 ```php
 <?php
-$THEME->name = 'nombretema';
+$THEME->name = 'ncthemev1';
 $THEME->parents = ['boost'];
 $THEME->sheets = [];
 $THEME->editor_sheets = [];
@@ -35,12 +35,12 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 ## 3. Archivo `version.php` (obligatorio)
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/version.php
+sudo nano /var/www/html/moodle/theme/ncthemev1/version.php
 ```
 
 ```php
 <?php
-$plugin->component = 'theme_nombretema';
+$plugin->component = 'theme_ncthemev1';
 $plugin->version   = 2026072300;   // formato YYYYMMDDXX
 $plugin->requires  = 2024100700;   // build de tu versión de Moodle
 $plugin->maturity  = MATURITY_STABLE;
@@ -53,12 +53,12 @@ $plugin->dependencies = [
 ## 4. String de idioma (obligatorio, mínimo el nombre del tema)
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/lang/es/theme_nombretema.php
+sudo nano /var/www/html/moodle/theme/ncthemev1/lang/es/theme_ncthemev1.php
 ```
 
 ```php
 <?php
-$string['pluginname'] = 'Nombre Tema Instituto';
+$string['pluginname'] = 'Tema Instituto NeuroCode';
 $string['choosereadme'] = 'Tema institucional heredado de Boost.';
 ```
 
@@ -67,7 +67,7 @@ $string['choosereadme'] = 'Tema institucional heredado de Boost.';
 **a) Precomputado (variables antes de compilar Boost):**
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/scss/pre.scss
+sudo nano /var/www/html/moodle/theme/ncthemev1/scss/pre.scss
 ```
 
 ```scss
@@ -77,7 +77,7 @@ $primary: #0057a3; // color institucional
 **b) Post (overrides finales, después de Boost):**
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/scss/post.scss
+sudo nano /var/www/html/moodle/theme/ncthemev1/scss/post.scss
 ```
 
 ```scss
@@ -89,7 +89,7 @@ sudo nano /var/www/html/moodle/theme/nombretema/scss/post.scss
 **c) Archivo principal que amarra ambos:**
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/scss/nombretema.scss
+sudo nano /var/www/html/moodle/theme/ncthemev1/scss/ncthemev1.scss
 ```
 
 ```scss
@@ -99,7 +99,7 @@ sudo nano /var/www/html/moodle/theme/nombretema/scss/nombretema.scss
 ## 6. Función para cargar el SCSS (obligatoria, va en `lib.php`)
 
 ```bash
-sudo nano /var/www/html/moodle/theme/nombretema/lib.php
+sudo nano /var/www/html/moodle/theme/ncthemev1/lib.php
 ```
 
 ```php
@@ -119,8 +119,8 @@ function theme_nombretema_get_main_scss_content($theme) {
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     }
 
-    $pre = file_get_contents($CFG->dirroot . '/theme/nombretema/scss/pre.scss');
-    $post = file_get_contents($CFG->dirroot . '/theme/nombretema/scss/post.scss');
+    $pre = file_get_contents($CFG->dirroot . '/theme/ncthemev1/scss/pre.scss');
+    $post = file_get_contents($CFG->dirroot . '/theme/ncthemev1/scss/post.scss');
 
     return $pre . "\n" . $scss . "\n" . $post;
 }
@@ -129,14 +129,14 @@ function theme_nombretema_get_main_scss_content($theme) {
 ## 7. Permisos
 
 ```bash
-sudo chown -R www-data:www-data /var/www/html/moodle/theme/nombretema
-sudo chmod -R 755 /var/www/html/moodle/theme/nombretema
+sudo chown -R www-data:www-data /var/www/html/moodle/theme/ncthemev1
+sudo chmod -R 755 /var/www/html/moodle/theme/ncthemev1
 ```
 
 ## 8. Activar el tema
 
 1. Administración del sitio → Apariencia → Temas → Selector de temas
-2. Seleccionar `Nombre Tema Instituto`
+2. Seleccionar `Tema Instituto Neurocode`
 3. Ir a Administración del sitio → Notificaciones (ejecuta el proceso de instalación del plugin)
 
 ## 9. Purgar cachés tras cada cambio de SCSS/PHP
@@ -149,12 +149,11 @@ O vía interfaz: Administración del sitio → Desarrollo → Purgar cachés.
 
 ## 10. Logo institucional (opcional, vía admin, no código)
 
-Apariencia → Configuración del tema (una vez activo `nombretema`) → subir logo y favicon.
+Apariencia → Configuración del tema (una vez activo `ncthemev1`) → subir logo y favicon.
 
 ---
 
 ## Notas
 
-- Reemplaza `nombretema` por el nombre real (minúsculas, sin espacios/guiones, ej. `neurocode`)
 - Cada cambio en `pre.scss`/`post.scss` requiere purgar caché para verse reflejado
-- Para layouts personalizados (ej. header distinto), copiar el archivo `.php` correspondiente desde `theme/boost/layout/` a `theme/nombretema/layout/` y modificarlo ahí
+- Para layouts personalizados copiar el archivo `.php` correspondiente desde `theme/boost/layout/` a `theme/ncthemev1a/layout/` y modificarlo ahí

@@ -1,26 +1,28 @@
 # Configuración Específica de Moodle
 
-## 1. Configuración general del sitio
+En este documento se detalla los ajustes y estructuras de la plataforma para el Instituto Tecnológico Neurocode. Sirviendo como referencia para la disponibilidad de personalización de la plataforma a nivel funcional.
+
+## 1. Configuración General
 
 **Administración del sitio → General → Configuración del sitio**
 
-- Nombre completo del sitio: ej. "Campus Virtual - Instituto NeuroCode"
-- Nombre corto: ej. "CV-NeuroCode"
-- Página de inicio: define si muestra login directo o lista de cursos
-- Idioma: Español (verifica que el paquete de idioma esté instalado en Administración → Idioma → Paquetes de idioma)
+Nombre completo del sitio: ej. "Instituto Tecnológico NeuroCode"
+Nombre corto: ej. "NeuroCode"
+Página de inicio:
 
-**Apariencia → Tema**
+- Idioma: Español
 
-- Instala un tema acorde al instituto, o usa "Boost" (el predeterminado, funciona bien)
-- Sube el logo institucional en Apariencia → Configuración del tema
+  **Apariencia → Tema**
 
-## 12.2 Configurar métodos de autenticación
+Revisar: [Tema-Personalizado](/docs/Tema-Personalizado.md)
+
+## 2 Métodos de autenticación
 
 **Administración del sitio → Extensiones (Plugins) → Autenticación**
 
 Las cuentas se gestionarán de forma manual: al matricular a un estudiante, se crea su usuario directamente en Moodle.
 
-**Opción A — Cuentas manuales:**
+**Cuentas manuales:**
 
 - Habilita solo "Cuentas manuales"
 - Crea usuarios uno a uno al momento de matricular, o de forma masiva vía CSV (Administración → Usuarios → Subir usuarios) si se matricula un grupo completo a la vez
@@ -35,6 +37,10 @@ jperez,Temporal123!,Juan,Pérez,jperez@instituto.edu,manual
 ## 12.3 Crear la estructura de categorías de cursos
 
 **Administración del sitio → Cursos → Gestionar cursos y categorías**
+
+### Categoría Presencial
+
+1. Condición de finalización:
 
 ## 12.4 Configurar roles y permisos
 

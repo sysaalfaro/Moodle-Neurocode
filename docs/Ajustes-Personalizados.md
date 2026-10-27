@@ -16,50 +16,62 @@ Página de inicio:
 
 Revisar: [Tema-Personalizado](/docs/Tema-Personalizado.md)
 
-## 2 Métodos de autenticación
+## 2. Métodos de autenticación
 
 **Administración del sitio → Extensiones (Plugins) → Autenticación**
 
-Las cuentas se gestionarán de forma manual: al matricular a un estudiante, se crea su usuario directamente en Moodle.
+Las cuentas se gestionarán de forma manual
 
-**Cuentas manuales:**
-
-- Habilita solo "Cuentas manuales"
-- Crea usuarios uno a uno al momento de matricular, o de forma masiva vía CSV (Administración → Usuarios → Subir usuarios) si se matricula un grupo completo a la vez
+- Se habilita solo "Cuentas manuales"
+- Se crean usuarios uno a uno al momento de matricular, o de forma masiva vía CSV **(Administración → Usuarios → Subir usuarios)** si se matricula un grupo completo a la vez
 
 Formato del CSV para carga masiva:
 
 ```csv
 username,password,firstname,lastname,email,auth
-jperez,Temporal123!,Juan,Pérez,jperez@instituto.edu,manual
+101010101,101010101,Juan,Pérez,jperez@example.com,manual
 ```
 
-## 12.3 Crear la estructura de categorías de cursos
+## 3. Estructura de Cursos
 
 **Administración del sitio → Cursos → Gestionar cursos y categorías**
 
 ### Categoría Presencial
 
-1. Condición de finalización:
+Fomarmato del curso: Secciones personalizadas (Módulos).
+Condición de finalización: Manual (El profesor o gestores marcan cuando el estudiante curso la totalidad de clases).
 
-## 12.4 Configurar roles y permisos
+### Categoría Virtual Asicrónico
+
+Fomarmato del curso: Secciones personalizadas (Módulos).
+Condición de finalización: Completar todas las actividades, quizes y acceder a todos los materiales.
+
+## 4. Roles y permisos
 
 **Administración del sitio → Usuarios → Permisos → Definir roles**
 
-Roles clave (ya vienen predefinidos, solo asigna):
+Roles clave:
 
-- **Administrador** → 2 administradores
-- **Profesor** → 20-30 profesores (pueden crear/editar contenido y calificar)
-- **Estudiante** → ~60 estudiantes
+- **Gestores** → Control completo de la plataforma y su contenido.
+- **Profesor** → Pueden crear/editar contenido y calificar en sus correspondientes cursos.
+- **Estudiante** → Puede acceder al contenido y actividades de los cursos en los que se encuentra matriculado.
+- **Usuario** → Puede ver los anuncios e información general de los cursos del Instituto.
 
 Asignación de roles a nivel de curso: dentro de cada curso → Participantes → Inscribir usuarios.
 
-**Recomendación:** usar "Cohortes" (Administración → Usuarios → Cohortes) para agrupar estudiantes por año/sección y facilitar la inscripción masiva a varios cursos a la vez.
+_Recomendación: usar "Cohortes" (Administración → Usuarios → Cohortes) para agrupar estudiantes por año/sección y facilitar la inscripción masiva a varios cursos a la vez._
 
-## 12.5 Repositorio de recursos didácticos
+## 5. Repositorio de Recursos y Actividades
 
-- Dentro de cada curso, usar la actividad/recurso "Carpeta" o "Archivo" para subir materiales.
-- Para un repositorio institucional centralizado: Administración del sitio → Extensiones → Repositorios → habilitar "Sistema de archivos del servidor" para un repositorio compartido entre cursos.
+### Repositorio Individual:
+
+1. En cada curso correspondiente.
+2. Usar la actividad/recurso "Carpeta" o "Archivo" para subir materiales o actividades.
+3. Agruparlas según las secciones (Módulos) del curso.
+
+### Repositorio General:
+
+1. Administración del sitio → Extensiones → Repositorios → habilitar "Sistema de archivos del servidor" para un repositorio compartido entre cursos.
 
 ## 12.6 Calendario, avisos y recordatorios
 

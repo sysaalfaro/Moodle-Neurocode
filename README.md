@@ -1,34 +1,25 @@
 # Aula Virtual - Instituto Tecnológico Neurocode
 
-El proyecto consiste en la implementación de la plataforma LMS Moodle para el Insituto Tecnológico Neurocode ubicado en
-San José.
+El proyecto consiste en la implementación de la plataforma 'LMS Moodle' para el Insituto Tecnológico Neurocode ubicado en
+San José, para el cuál colabororo como educador y técnico desde Enero del 2025.
 
-El alcanze del proyecto es a nivel local dentro de la red institucional, con la finalidad de centralizar la gestión académica,
-el repositorio de materiales didácticos y facilitar la modalidad virtual de los cursos.
+El alcanze del proyecto por el momento es a nivel local dentro de la red institucional, con la finalidad de centralizar la gestión académica
+y formar un repositorio de materiales didácticos.
 
-## Cronograma
-
-| Fase           | Descripción                                                                         | Fecha                   |
-| -------------- | ----------------------------------------------------------------------------------- | ----------------------- |
-| Prueba         | Test de instalación y configuración dentro de un Máquina Virtual                    | 19/07/2026 - 24/07/2026 |
-| Preparación    | Establecimiento de configuraciones, parámetros y características necesarias         | 25 de Julio del 2026    |
-| Implementación | Instalación del sistema operativo, entorno y plataforma en el servidor físico       | 4 de Agosto del 2026    |
-| Configuración  | Configuración de características, personalización y funcionamiento de la plataforma | 6 de Agosto del 2026    |
-| Adaptación     | Pruebas piloto en las máquinas con los primeros cursos y usuarios                   | Por confirmar...        |
-| Correción      | Ajustes ante posibles fallos o sugerencias de mejora                                | Por confirmar...        |
-| Mantenimiento  | Revisión y cuidado del servidor y la plataforma para su correcto funcionamiento     | Continuo...             |
+Con el tiempo se contempla que la plataforma evolucione a una página abierta que permite el acceso externo para los estudiantes al contenido
+de los cursos, así como facilitar la modalidad virtual y otras actividades académicas.
 
 ## Fase de prueba
 
-Al ser este mi primer proyecto de alcanze profesional, opté por realizar todas las pruebas necesarias y el autoaprendizaje
-necesario para llevar a cabo el proyecto mediante una prueba de implementación en una máquina virtual instalada en mi PC.
+Se realizaron todas las investigaciones y pruebas necesarias previo a la implementación mediante un "clon" del servidor en una máquina virtual VMware
+donde se realizan todas las instalaciones y configuraciones en primer lugar, además se comprueba el comportamiento y los resultados antes de implementarlos.
 
-Con el apoyo de los fundamentos obtenidos durante lo progresado en mi bachillerato de Ingeniería en Sistemas en la Universidad
-Tecnológica Costarricense, sumado a recursos de aprendizaje en plataformas como YouTube y la documentación oficial de Moodle.
+El desarrollo del proyecto ha sido posible con los fundamentos obtenidos durante lo progresado en mi bachillerato de Ingeniería en Sistemas en la Universidad
+Tecnológica Costarricense, sumado a recursos de aprendizaje en plataformas digitales y la documentación oficial de Moodle.
 
-### Simulación del servidor
+### Máquina Virtual
 
-Se configuró una máquina virtual con VMware con las siguientes especifícaciones:
+Se configuró con las siguientes especifícaciones:
 
 1. 4GB de RAM, CPU 2, 30GB de disco.
 2. Adaptador de red "Bridge " con el fin de simular la conexión a la misma red entre el servidor real y la pc de configuración.
@@ -92,7 +83,7 @@ Las políticas se seguridad son mínimas en esta fase ya que el servidor no est�
 
 ### SSL/HTTPS
 
-<!-- No aplica de momento... -->
+<!-- No aplica por el momento... -->
 
 ### Autenticación SSH por llave
 
@@ -173,12 +164,15 @@ De lo contrario la IP puede cambiar de dirección en cualquier momento, lo que r
 
 ## Contactos y responsables
 
-- Administrador y técnico:
+- Técnico y Desarrollador:
   Anthony Gabriel Alfaro Mejía
   sysaalfaro@gmail.com
+  +506 8389 0003
 
 - Responsable académico:
   José Rodolfo Herrera Baca
+  neurocodeconsulting@gmail.com
+  +506 7269 5814
 
 ## Licencia y créditos
 
